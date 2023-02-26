@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './style.css';
 const { DateTime } = require('luxon');
 
+const rootUri = process.env.REACT_APP_SERVER_URL || 'http://localhost:9000'
+
 class Message extends React.Component {
     constructor(props) {
         super(props);
@@ -26,7 +28,7 @@ class Message extends React.Component {
     }
 
     componentDidMount() {
-        fetch('https://just-a-bulletin.onrender.com/api')
+        fetch(`${rootUri}/api`)
             .then(res => res.json())
             .then(res => this.setState({ board: res, dataIsLoaded: true }))
             .catch(err => err);
@@ -46,7 +48,7 @@ class Message extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        fetch('https://just-a-bulletin.onrender.com/new', {
+        fetch(`${rootUri}/new`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ user: this.state.user, text: this.state.text }),
@@ -80,13 +82,13 @@ class Message extends React.Component {
 
     handleFind() {
         if (this.state.userSearch === '' && this.state.dateFromSearch === '' && this.state.dateToSearch === '') {
-            fetch('https://just-a-bulletin.onrender.com/api')
+            fetch(`${rootUri}/api`)
                 .then(res => res.json())
                 .then(res => this.setState({ board: res }))
                 .catch(err => err);
             return;
         }
-        fetch('https://just-a-bulletin.onrender.com/find', {
+        fetch(`${rootUri}/find`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -103,7 +105,7 @@ class Message extends React.Component {
     };
 
     handleAll() {
-        fetch('https://just-a-bulletin.onrender.com/api')
+        fetch(`${rootUri}/api`)
             .then(res => res.json())
             .then(res => this.setState({ board: res }))
             .catch(err => err);
