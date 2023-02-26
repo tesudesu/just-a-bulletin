@@ -26,7 +26,7 @@ class Message extends React.Component {
     }
 
     componentDidMount() {
-        fetch('/server/api')
+        fetch('https://just-a-bulletin.onrender.com/api')
             .then(res => res.json())
             .then(res => this.setState({ board: res, dataIsLoaded: true }))
             .catch(err => err);
@@ -46,7 +46,7 @@ class Message extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        fetch('/server/new', {
+        fetch('https://just-a-bulletin.onrender.com/new', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ user: this.state.user, text: this.state.text }),
@@ -80,13 +80,13 @@ class Message extends React.Component {
 
     handleFind() {
         if (this.state.userSearch === '' && this.state.dateFromSearch === '' && this.state.dateToSearch === '') {
-            fetch('/server/api')
+            fetch('https://just-a-bulletin.onrender.com/api')
                 .then(res => res.json())
                 .then(res => this.setState({ board: res }))
                 .catch(err => err);
             return;
         }
-        fetch('/server/find', {
+        fetch('https://just-a-bulletin.onrender.com/find', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -103,7 +103,7 @@ class Message extends React.Component {
     };
 
     handleAll() {
-        fetch('/server/api')
+        fetch('https://just-a-bulletin.onrender.com/api')
             .then(res => res.json())
             .then(res => this.setState({ board: res }))
             .catch(err => err);
