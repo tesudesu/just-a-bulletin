@@ -10,7 +10,13 @@ mongoose.set('strictQuery', false);
 
 mongoose.connect(process.env.MONGO_URI);
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "https://bulletin-b6k8.onrender.com",
+    "http://localhost:3000"
+  ],
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
