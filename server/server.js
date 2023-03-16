@@ -12,6 +12,7 @@ mongoose.connect(process.env.MONGO_URI);
 
 app.use(cors({
   origin: [
+    "https://www.justabulletin.com",
     "https://bulletin-b6k8.onrender.com",
     "http://localhost:3000"
   ],
