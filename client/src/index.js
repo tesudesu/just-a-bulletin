@@ -205,7 +205,7 @@ class Message extends React.Component {
 
                 </div>
                 <div id='footer'>
-                    <a href='https://github.com/tesudesu'>© Te Su</a>
+                    <a href='mailto:witty.opposum@gmail.com'>© Te Su</a>
                 </div>
             </div>
         );
