@@ -34,12 +34,10 @@ app.post('/new', [
   body('user')
     .trim()
     .isLength({ min: 1 })
-    .escape()
     .withMessage('A name must be entered'),
   body('text')
     .trim()
     .isLength({ min: 1 })
-    .escape()
     .withMessage('Some message must be provided'),
 ], async (req, res) => {
   const errors = validationResult(req);
@@ -60,8 +58,7 @@ app.post('/new', [
 
 app.post('/find', [
   body('usersearch')
-    .trim()
-    .escape(),
+    .trim(),
   body('datefromsearch')
     .trim(),
   body('datetosearch')
