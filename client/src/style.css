@@ -55,7 +55,7 @@ h3 {
     outline: none;
     padding: 5px;
     width: 100%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: inherit;
     font-size: 14px;
 }
 
@@ -64,7 +64,7 @@ h3 {
     background-color: #fffffd;
     outline: none;
     padding: 5px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: inherit;
     font-size: 14px;
 }
 
@@ -81,7 +81,7 @@ h3 {
 
 .button-style {
     color: #FE53A6;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: inherit;
     font-size: 15px;
     font-weight: bold;
     border: none;

@@ -45,7 +45,6 @@ const Message = () => {
                 setUser('');
                 setText('');
             });
-        console.log('submit');
     };
 
     const handleChangeUserSearch = (e) => {
@@ -79,7 +78,6 @@ const Message = () => {
         })
             .then(res => res.json())
             .then(res => setBoard(res));
-        console.log('searched');
     };
 
     const handleAll = () => {
@@ -126,7 +124,7 @@ const Message = () => {
                             <label className='label2'>What do you call yourself?</label>
                         </p>
                         <p>
-                            <input required type='text' className='input-box' maxLength='30' size='20' value={user} onChange={handleChangeUser} />
+                            <input required type='text' className='input-box' maxLength='40' size='30' value={user} onChange={handleChangeUser} />
                         </p>
                         <p>
                             <label className='label2'>What do you want to say?</label>
@@ -144,7 +142,7 @@ const Message = () => {
                         <h3>Find Messages by Alias and/or Date</h3>
                         <p>
                             <label className='label2'>Alias: </label>
-                            <input type='text' className='input-box' maxLength='30' size='20' placeholder='case-sensitive' value={userSearch} onChange={handleChangeUserSearch} />
+                            <input type='text' className='input-box' maxLength='40' size='30' placeholder='case-sensitive' value={userSearch} onChange={handleChangeUserSearch} />
                         </p>
                         <div className='spaceout'>
                             <div>
