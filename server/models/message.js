@@ -5,7 +5,7 @@ const MessageSchema = new mongoose.Schema({
         type: String,
         required: [true, 'A name must be entered'],
         trim: true,
-        maxLength: 35
+        maxLength: 45
     },
     text: {
         type: String,
