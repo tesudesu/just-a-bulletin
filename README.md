@@ -1,7 +1,11 @@
-# Just A Bulletin
+## Just A Bulletin
+
+Web application: https://www.justabulletin.com
 
 Write a message for strangers across the globe or beside you.
 
-Technologies: HTML, CSS, JavaScript (React), Express (Node.js), MongoDB, Mongoose
+Technologies: HTML, vanilla CSS, React, create-react-app, Express (Node.js), MongoDB, Mongoose
 
-Demo: https://www.justabulletin.com
+Designed and coded by me :grinning:
+
+All rights reserved.
