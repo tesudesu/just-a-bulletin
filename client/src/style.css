@@ -49,7 +49,7 @@ h3 {
 }
 
 .message-box {
-    border: 2px solid #FF8F00;
+    border: 1px solid #FF8F00;
     background-color: #fffffd;
     resize: none;
     outline: none;
@@ -60,12 +60,16 @@ h3 {
 }
 
 .input-box {
-    border: 2px solid #FF8F00;
+    border: 1px solid #FF8F00;
     background-color: #fffffd;
     outline: none;
     padding: 5px;
     font-family: inherit;
     font-size: 14px;
+}
+
+.message-box:focus, .input-box:focus {
+    outline: 1px solid #FF8F00;
 }
 
 .spaceout {
