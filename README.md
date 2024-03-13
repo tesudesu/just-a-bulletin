@@ -1,6 +1,6 @@
 ## Just A Bulletin
 
-Web application: https://www.justabulletin.com
+Web application: https://bulletin-b6k8.onrender.com
 
 Write a message for strangers across the globe or beside you.
 
